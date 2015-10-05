@@ -19,15 +19,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Petcare", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Accueil", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Page d'accueil", "Index", "Home")</li>*@
 
                     <!-- html helper pour generer un lien  -->
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Qui sommes-nous ?", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contactez-nous", "Contact", "Home")</li>
                 </ul>
                 <!-- Pour rendre une vue partiel (dans Shared par default) -->
                 @Html.Partial("_LoginPartial")
@@ -40,7 +40,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Dieulin, Gissel & Sofiane | Master 2 IAGL</p>
         </footer>
     </div>
 
