@@ -1,4 +1,6 @@
 ﻿@using Microsoft.AspNet.Identity
+
+<!-- Request (instance dela classe HttpRequestBase) est le context de la requete courante (Il existe aussi Response, Service, Session, User, UICulture) -->
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))

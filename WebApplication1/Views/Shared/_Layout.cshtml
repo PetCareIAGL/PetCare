@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Petcare</title>
+
+    <!-- inclusion des bundle -->
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -22,14 +24,19 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+
+                    <!-- html helper pour generer un lien  -->
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+                <!-- Pour rendre une vue partiel (dans Shared par default) -->
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+
     <div class="container body-content">
+        <!-- emplacement de la vue -->
         @RenderBody()
         <hr />
         <footer>
@@ -39,6 +46,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
+    <!-- reserve l'espace pour qu'une vue ecrive du contenu -->
     @RenderSection("scripts", required: false)
 </body>
 </html>
