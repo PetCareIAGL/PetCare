@@ -10,11 +10,14 @@ namespace WebApplication1.Controllers
     {
         public ActionResult Index()
         {
+            // méthode retournant un resultat de type ViewResult dérivé de ActionResult
+            // elle doit contenir le nom de la vue à rendre. Par default si c'est pas présé on recherche la vue avec le meme nom que l'action
             return View();
         }
 
         public ActionResult About()
         {
+            // une proprieté automatiquement présent dans le controller; elle est automatiquement passée à la vue
             ViewBag.Message = "Petcare.";
 
             return View();
