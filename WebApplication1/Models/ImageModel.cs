@@ -17,10 +17,11 @@ namespace WebApplication1.Models
         public string Description { get; set; }
     }
 
-    public class Context : DbContext
+    public class ImageContext : DbContext
     {
-        public Context()
-            : base("MyConnectionString") //connection string name in the database
+        public ImageContext()
+            //: base("MyConnectionString") //connection string name in the database
+            : base("DefaultConnection")
         {
 
         }

@@ -434,7 +434,7 @@ namespace WebApplication1.Controllers
                 //get the bytes from the uploaded file
                 byte[] data = _imageController.GetBytesFromFile(file);
 
-                using (Context db = new Context())
+                using (ImageContext db = new ImageContext())
                 {
                     db.ImageModel.Add(new ImageModel() { Image = data });
                     db.SaveChanges();

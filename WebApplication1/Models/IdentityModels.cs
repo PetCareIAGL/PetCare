@@ -20,7 +20,6 @@ namespace WebApplication1.Models
         public string Name { get; set; }
         public string LastName { get; set; }
         public DateTime Birthdate { get; set; }
-        //public string PhoneNumber { get; set; }
         public string Adress { get; set; }
         public byte[] Image { get; set; }
     }
@@ -29,8 +28,8 @@ namespace WebApplication1.Models
     {
         //public MyDbContext() : base("MyConnectionString") { }
         public ApplicationDbContext()
-            //: base("DefaultConnection", throwIfV1Schema: false)
-            : base("MyConnectionString") 
+            : base("DefaultConnection", throwIfV1Schema: false)
+            //: base("MyConnectionString") 
         {
         }
 
