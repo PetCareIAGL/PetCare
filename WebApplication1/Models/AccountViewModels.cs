@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Models
@@ -55,7 +56,7 @@ namespace WebApplication1.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mot de passe")]
         public string Password { get; set; }
 
         [Display(Name = "Remember me?")]
@@ -65,9 +66,13 @@ namespace WebApplication1.Models
     public class RegisterViewModel
     {
         [Required]
-        [Display(Name = "Name")]
+        [Display(Name = "Prenom")]
         public string Name { get; set; }
 
+        [Required]
+        [Display(Name = "Nom")]
+        public string LastName { get; set; }
+        
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
@@ -76,13 +81,23 @@ namespace WebApplication1.Models
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mot de passe")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Confirmation Mot de passe")]
+        [Compare("Password", ErrorMessage = "La confirmation du mot de passe ne correspond pas.")]
         public string ConfirmPassword { get; set; }
+
+        [Display(Name = "Date de naissance")]
+        public DateTime Birthdate { get; set; }
+
+        [Display(Name = "Téléphone")]
+        public string PhoneNumber { get; set; }
+
+        [Display(Name = "Adresse")]
+        public string Adress { get; set; }
+        public byte[] Image { get; set; }
     }
 
     public class ResetPasswordViewModel
@@ -95,12 +110,12 @@ namespace WebApplication1.Models
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mot de passe")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Confirmation Mot de passe")]
+        [Compare("Password", ErrorMessage = "La confirmation du mot de passe ne correspond pas.")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }

@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 
 namespace WebApplication1.Models
 {
@@ -16,12 +17,19 @@ namespace WebApplication1.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public string Name { get; set; }
+        public string LastName { get; set; }
+        public DateTime Birthdate { get; set; }
+        public string Adress { get; set; }
+        public byte[] Image { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        //public MyDbContext() : base("MyConnectionString") { }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
+            //: base("MyConnectionString") 
         {
         }
 

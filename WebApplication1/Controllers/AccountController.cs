@@ -17,6 +17,7 @@ namespace WebApplication1.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ImageController _imageController;
 
         public AccountController()
         {
@@ -151,7 +152,19 @@ namespace WebApplication1.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser 
+                { 
+                    UserName = model.Email , 
+                    Email = model.Email ,
+                    Name = model.Name,
+                    LastName = model.LastName,
+                    Birthdate = model.Birthdate,
+                    PhoneNumber = model.PhoneNumber,
+                    Adress = model.Adress,
+                    Image = model.Image
+                    
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -402,6 +415,33 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
+        //
+        // GET: /Account/Register
+        [AllowAnonymous]
+        public PartialViewResult Load()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public PartialViewResult Load(HttpPostedFileBase file)
+        {
+            if (file != null)
+            {
+                _imageController = new ImageController();
+                //get the bytes from the uploaded file
+                byte[] data = _imageController.GetBytesFromFile(file);
+
+                using (IDal dal = new Dal())
+                {
+                    dal.addImage(data, "");
+                }
+            }
+
+            return PartialView();
+        }        
 
         protected override void Dispose(bool disposing)
         {
