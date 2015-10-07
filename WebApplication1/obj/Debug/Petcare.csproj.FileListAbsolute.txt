@@ -161,3 +161,9 @@ C:\Users\utilisateur\Documents\Visual Studio 2013\Projects\PetCare\WebApplicatio
 C:\Users\utilisateur\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\Petcare.csprojResolveAssemblyReference.cache
 C:\Users\utilisateur\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\utilisateur\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\System.Web.Razor.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\System.Web.WebPages.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Razor.resources.dll

@@ -10,14 +10,10 @@ namespace WebApplication1.Models
     public class AnimalModel
     {
         [Key]
-        public int idAnimal { get; set; }
+        public int id { get; set; }
         public string name { get; set; }
         public string type { get; set;}
         public string race { get; set; }
-
-        public class AnimalDBContext : DbContext
-        {
-            public DbSet<AnimalModel> Animals { get; set; }
-        }
+        public virtual List<ImageModel> photo { get; set; }
     }
 }
