@@ -64,13 +64,19 @@ namespace WebApplication1.Controllers
                 : "";
 
             var userId = User.Identity.GetUserId();
+            ApplicationUser user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+            
             var model = new IndexViewModel
             {
                 HasPassword = HasPassword(),
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+                images = user.Image,
+                Name = user.Name,
+                LastName = user.LastName,
+                Email = user.Email
             };
             return View(model);
         }
