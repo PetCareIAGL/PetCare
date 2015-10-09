@@ -79,13 +79,13 @@ namespace WebApplication1.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "{0} doit être d'au moins {2} caractères.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mot de passe")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirmation Mot de passe")]
+        [Display(Name = "Confirmer Mot de passe")]
         [Compare("Password", ErrorMessage = "La confirmation du mot de passe ne correspond pas.")]
         public string ConfirmPassword { get; set; }
 
@@ -97,7 +97,9 @@ namespace WebApplication1.Models
 
         [Display(Name = "Adresse")]
         public string Adress { get; set; }
-        public byte[] Image { get; set; }
+
+        [Display(Name = "Photo")]
+        public virtual ImageModel Image { get; set; }
     }
 
     public class ResetPasswordViewModel
@@ -108,7 +110,7 @@ namespace WebApplication1.Models
         public string Email { get; set; }
 
         [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "{0} doit être d'au moins {2} caractères.", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mot de passe")]
         public string Password { get; set; }

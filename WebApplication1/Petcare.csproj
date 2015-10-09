@@ -167,6 +167,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510061752305_InitialCreate.cs" />
+    <Compile Include="Migrations\201510061752305_InitialCreate.Designer.cs">
+      <DependentUpon>201510061752305_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510082202068_images.cs" />
+    <Compile Include="Migrations\201510082202068_images.Designer.cs">
+      <DependentUpon>201510082202068_images.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510090827134_images1.cs" />
+    <Compile Include="Migrations\201510090827134_images1.Designer.cs">
+      <DependentUpon>201510090827134_images1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510090940047_image.cs" />
+    <Compile Include="Migrations\201510090940047_image.Designer.cs">
+      <DependentUpon>201510090940047_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdvertisementModel.cs" />
     <Compile Include="Models\AnimalModel.cs" />
@@ -247,6 +264,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201510061752305_InitialCreate.resx">
+      <DependentUpon>201510061752305_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510082202068_images.resx">
+      <DependentUpon>201510082202068_images.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510090827134_images1.resx">
+      <DependentUpon>201510090827134_images1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510090940047_image.resx">
+      <DependentUpon>201510090940047_image.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

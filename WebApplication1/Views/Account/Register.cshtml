@@ -3,33 +3,10 @@
     ViewBag.Title = "S'inscrire";
 }
 
-@*@{
-    WebImage photo = null;
-    var newFileName = "";
-    var imagePath = "";
-    var imageThumbPath = "";
-
-    if (IsPost)
-    {
-        photo = WebImage.GetImageFromRequest();
-        if (photo != null)
-        {
-            newFileName = Guid.NewGuid().ToString() + "_" +
-                Path.GetFileName(photo.FileName);
-            imagePath = @"images\" + newFileName;
-            photo.Save(@"~\" + imagePath);
-
-            imageThumbPath = @"images\thumbs\" + newFileName;
-            photo.Resize(width: 60, height: 60, preserveAspectRatio: true,
-               preventEnlarge: true);
-            photo.Save(@"~\" + imageThumbPath);
-        }
-    }
-}*@
-
 <h2>@ViewBag.Title.</h2>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+@*@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))*@
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype ="multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     <h4>Créer une compte.</h4>
@@ -83,43 +60,19 @@
             @Html.TextBoxFor(m => m.Adress, new { @class = "form-control" })
         </div>
     </div>
-    @*<div class="form-group">
+    <div class="form-group">
+        @Html.LabelFor(m => m.Image, new { @class = "control-label col-md-2" })
         <fieldset>
-            <label for="Image">Image</label>
-            <input type="file" name="Image" />
-            <br />
-            <input type="submit" value="Upload" />
+            <input type="file" name="file"/>
         </fieldset>
-    </div>*@
-    @*if (imagePath != "")
-    {
-        <div class="result">
-            <img src="@imageThumbPath" alt="Thumbnail image" />
-            <a href="@Html.AttributeEncode(imagePath)" target="_Self">
-                View full size
-            </a>
-        </div>
-
-    }*@
-
-
+    </div>
+    
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="S'inscrire" />
         </div>
     </div>
 }
-
-@{
-    ViewBag.Title = "Load";
-}
-@using (Html.BeginForm("Load", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    <p> Upload File</p>
-    <input type="file" id="file" name="file" /><br />
-    <input type="submit" class="btn btn-default" value="Load" />
-}
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

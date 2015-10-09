@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WebApplication1.Models;
+using System.Collections.Generic;
+using System.IO;
 
 namespace WebApplication1.Controllers
 {
@@ -148,10 +150,23 @@ namespace WebApplication1.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(RegisterViewModel model, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
-            {
+            {               
+                if (file != null && file.ContentLength > 0)
+                {
+                    var imgModel = new ImageModel
+                    {
+                        description = System.IO.Path.GetFileName(file.FileName)
+                    };
+                    using (var reader = new System.IO.BinaryReader(file.InputStream))
+                    {
+                        imgModel.image = reader.ReadBytes(file.ContentLength);
+                    }
+                    model.Image = imgModel;                    
+                }
+                
                 var user = new ApplicationUser 
                 { 
                     UserName = model.Email , 
@@ -161,8 +176,7 @@ namespace WebApplication1.Controllers
                     Birthdate = model.Birthdate,
                     PhoneNumber = model.PhoneNumber,
                     Adress = model.Adress,
-                    Image = model.Image
-                    
+                    Image = model.Image                    
                 };
 
                 var result = await UserManager.CreateAsync(user, model.Password);
