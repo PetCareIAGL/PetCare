@@ -1,31 +1,34 @@
-﻿<!-- bloc de code à executer -->
+﻿@model WebApplication1.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Master IAGL";
+    ViewBag.Title = "Petcare";
+    ViewBag.Description = "Adopter un animal, c'est facile !";
 }
 
-<div class="jumbotron">
-    <h1>Petcare</h1>
-    <p class="lead">Adoptez un animal !</p>
-</div>
+<h3><a href="#">@ViewBag.Title</a></h3>
+<h6>@ViewBag.Description</h6>
+<h6>&nbsp;</h6>
 
+<a class="th radius" href="@Url.Content("~/Content/Petcare/img/car1.jpg")">
+    <img src=".@Url.Content("~/Content/Petcare/img/car1.jpg")">
+</a>
+
+<h6>&nbsp;</h6>
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="large-6 columns">
+        <div class="panel radius">
+            <h4>Contraintes</h4>
+            <p>Les départs en vacances sont fréquents. On a ne sait toujours pas où laisser votre cher animal.</p>
+            <p>N'abondonnez plus jamais votre ami ! Pensez à Petcare</p>
+            <cite>Petcare team</cite>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+    <div class="large-6 columns">
+        <div class="panel radius">
+            <h4>Agissons ensemble</h4>
+            <p>Une annonce peut suffir pour donner un sourire à votre animal de compagnie.</p>
+            <p>Alors n'attendez plus !</p>
+            <cite>Petcare team</cite>
+        </div>
     </div>
 </div>
