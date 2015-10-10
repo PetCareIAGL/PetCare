@@ -37,5 +37,7 @@ namespace WebApplication1.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.AdvertisementModel> AdvertisementModels { get; set; }
     }
 }
