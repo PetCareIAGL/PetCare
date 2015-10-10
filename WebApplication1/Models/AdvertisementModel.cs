@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 
 namespace WebApplication1.Models
@@ -21,5 +22,10 @@ namespace WebApplication1.Models
         public String description { get; set; }
 
         public virtual AnimalModel animal { get; set; }
+
+        //[Required]
+        //[ForeignKey("UserId")]
+        //public virtual ApplicationIdentity user { get; set; }
+        public string UserId { get; set; }
     }
 }

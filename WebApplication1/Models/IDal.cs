@@ -9,7 +9,7 @@ namespace WebApplication1.Models
     {
         // advertissement actions
         List<AdvertisementModel> getAllAdvertissements();
-        void addAdvertissement(DateTime date, string title, string description, AnimalModel animal);
+        void addAdvertissement(DateTime date, string title, string description, AnimalModel animal, string userId);
         void deleteAdvertissement(AdvertisementModel advertissement);
 
         // animal actions

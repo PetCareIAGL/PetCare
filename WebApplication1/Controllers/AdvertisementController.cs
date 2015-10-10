@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
+using Microsoft.AspNet.Identity;
 
 namespace WebApplication1.Controllers
 {
@@ -20,6 +21,10 @@ namespace WebApplication1.Controllers
                 : message == AdvertisementMessageId.Error ? "Erreur."
                 : "";
 
+            if (!Request.IsAuthenticated)
+            {
+                ViewBag.status = "Vous devez être connecté pour créer une annonce.";
+            }
             return View();
         }
         
@@ -29,29 +34,36 @@ namespace WebApplication1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult RegisterAdvertisement(AdvertisementModel model, HttpPostedFileBase file)
         {
-            if (ModelState.IsValid)
+            if(Request.IsAuthenticated)
             {
-                //animal 
-                AnimalModel animal = new AnimalModel
+                if (ModelState.IsValid)
                 {
-                    name = model.animal.race,
-                    type = model.animal.type,
-                    race = model.animal.race
-                };
-                          
-                if (file != null)
-                {                    
-                    _imageController = new ImageController();
-                    animal.photo = new List<ImageModel> { _imageController.GetImage(file) };
-                }                
+                    string userId = User.Identity.GetUserId();
 
-                using (IDal dal = new Dal())                
-                    dal.addAdvertissement(DateTime.Now, model.title, model.description, animal);
-                                
-                return RedirectToAction("RegisterAdvertisement", new { Message = AdvertisementMessageId.AddAdvertiseSuccess });
+                    //animal 
+                    AnimalModel animal = new AnimalModel
+                    {
+                        name = model.animal.race,
+                        type = model.animal.type,
+                        race = model.animal.race
+                    };
+
+                    if (file != null)
+                    {
+                        _imageController = new ImageController();
+                        animal.photo = new List<ImageModel> { _imageController.GetImage(file) };
+                    }
+
+                    using (IDal dal = new Dal())
+                        dal.addAdvertissement(DateTime.Now, model.title, model.description, animal, userId);
+
+                    return RedirectToAction("RegisterAdvertisement", new { Message = AdvertisementMessageId.AddAdvertiseSuccess });
+                }   
+                else
+                    return View(model);
             }
             else
-                return View(model);
+                return RedirectToAction("Login","Account");
         }
 
         public enum AdvertisementMessageId

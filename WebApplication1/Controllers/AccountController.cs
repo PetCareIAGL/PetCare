@@ -158,8 +158,7 @@ namespace WebApplication1.Controllers
                 {
                     _imageController = new ImageController();
                     model.Image = _imageController.GetImage(file);
-                }
-                
+                }                
                 
                 var user = new ApplicationUser 
                 { 

@@ -15,10 +15,12 @@ namespace WebApplication1.BddContextMigrations
                         date = c.DateTime(nullable: false),
                         title = c.String(nullable: false),
                         description = c.String(nullable: false),
+                        UserId = c.String(maxLength: 128),
                         animal_id = c.Int(),
                     })
                 .PrimaryKey(t => t.id)
                 .ForeignKey("dbo.AnimalModels", t => t.animal_id)
+                .Index(t => t.UserId)
                 .Index(t => t.animal_id);
             
             CreateTable(
@@ -73,20 +75,22 @@ namespace WebApplication1.BddContextMigrations
         
         public override void Down()
         {
-            AddColumn("dbo.AspNetUsers", "Image", c => c.Binary());
+            AddColumn("dbo.AspNetUsers", "Image", c => c.Binary());            
             DropForeignKey("dbo.AspNetUsers", "Image_id", "dbo.ImageModels");
             DropForeignKey("dbo.PersonModels", "image_id", "dbo.ImageModels");
             DropForeignKey("dbo.AdvertisementModels", "animal_id", "dbo.AnimalModels");
+            DropForeignKey("dbo.AdvertisementModels", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.ImageModels", "AnimalModel_id", "dbo.AnimalModels");
             DropIndex("dbo.AspNetUsers", new[] { "Image_id" });
             DropIndex("dbo.PersonModels", new[] { "image_id" });
             DropIndex("dbo.ImageModels", new[] { "AnimalModel_id" });
             DropIndex("dbo.AdvertisementModels", new[] { "animal_id" });
+            DropIndex("dbo.AdvertisementModels", new[] { "UserId" });
             DropColumn("dbo.AspNetUsers", "Image_id");
             DropTable("dbo.PersonModels");
             DropTable("dbo.ImageModels");
             DropTable("dbo.AnimalModels");
-            DropTable("dbo.AdvertisementModels");
+            DropTable("dbo.AdvertisementModels");            
         }
     }
 }

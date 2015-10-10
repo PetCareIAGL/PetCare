@@ -27,9 +27,9 @@ namespace WebApplication1.Models
             return bdd.advertissements.ToList<AdvertisementModel>();            
         }
 
-        void IDal.addAdvertissement(DateTime date_param, string title_param, string description_param, AnimalModel animal_param)
+        void IDal.addAdvertissement(DateTime date_param, string title_param, string description_param, AnimalModel animal_param, string userId)
         {
-            bdd.advertissements.Add(new AdvertisementModel { date = date_param, title = title_param, description = description_param, animal = animal_param });            
+            bdd.advertissements.Add(new AdvertisementModel { date = date_param, title = title_param, description = description_param, animal = animal_param, UserId = userId });            
             // persister les modifications en base de données
             bdd.SaveChanges();
         }

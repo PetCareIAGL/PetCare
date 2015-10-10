@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 namespace WebApplication1.Models
 {
@@ -22,6 +24,9 @@ namespace WebApplication1.Models
         public DateTime Birthdate { get; set; }
         public string Adress { get; set; }
         public virtual ImageModel Image { get; set; }
+
+        [ForeignKey("UserId")]
+        public virtual ICollection<AdvertisementModel> Adversitements { get; set; }    
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
