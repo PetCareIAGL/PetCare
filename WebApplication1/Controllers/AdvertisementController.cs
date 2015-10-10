@@ -10,16 +10,7 @@ namespace WebApplication1.Controllers
 {
     public class AdvertisementController : Controller
     {
-        // GET: Advertisement
-        //public ActionResult Index(AdvertisementMessageId? message)
-        //{
-        //    ViewBag.result =
-        //        message == AdvertisementMessageId.AddAdvertiseSuccess ? "Your advertise has been added."
-        //        : message == AdvertisementMessageId.Error ? "An error has occurred."
-        //        : "";
-
-        //    return View();
-        //}
+        private ImageController _imageController;
 
         public ActionResult RegisterAdvertisement(AdvertisementMessageId? message)
         {
@@ -47,18 +38,13 @@ namespace WebApplication1.Controllers
                     type = model.animal.type,
                     race = model.animal.race
                 };
+                          
+                if (file != null)
+                {                    
+                    _imageController = new ImageController();
+                    animal.photo = new List<ImageModel> { _imageController.GetImage(file) };
+                }                
 
-                if (file != null && file.ContentLength > 0)
-                {
-                    var imgModel = new ImageModel
-                    {
-                        description = System.IO.Path.GetFileName(file.FileName)
-                    };
-                    using (var reader = new System.IO.BinaryReader(file.InputStream))                    
-                        imgModel.image = reader.ReadBytes(file.ContentLength);
-                    
-                    animal.photo = new List<ImageModel> { imgModel };
-                }                                
                 using (IDal dal = new Dal())                
                     dal.addAdvertissement(DateTime.Now, model.title, model.description, animal);
                                 

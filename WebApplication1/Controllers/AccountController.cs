@@ -153,19 +153,13 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult> Register(RegisterViewModel model, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
-            {               
-                if (file != null && file.ContentLength > 0)
+            {   
+                if (file != null)
                 {
-                    var imgModel = new ImageModel
-                    {
-                        description = System.IO.Path.GetFileName(file.FileName)
-                    };
-                    using (var reader = new System.IO.BinaryReader(file.InputStream))
-                    {
-                        imgModel.image = reader.ReadBytes(file.ContentLength);
-                    }
-                    model.Image = imgModel;                    
+                    _imageController = new ImageController();
+                    model.Image = _imageController.GetImage(file);
                 }
+                
                 
                 var user = new ApplicationUser 
                 { 
