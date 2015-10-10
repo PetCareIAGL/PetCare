@@ -159,6 +159,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BddContextMigrations\201510092000356_Initial.cs" />
+    <Compile Include="BddContextMigrations\201510092000356_Initial.Designer.cs">
+      <DependentUpon>201510092000356_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BddContextMigrations\Configuration1.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdvertisementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -171,14 +176,6 @@
     <Compile Include="Migrations\201510061752305_InitialCreate.cs" />
     <Compile Include="Migrations\201510061752305_InitialCreate.Designer.cs">
       <DependentUpon>201510061752305_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510082202068_images.cs" />
-    <Compile Include="Migrations\201510082202068_images.Designer.cs">
-      <DependentUpon>201510082202068_images.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510090827134_images1.cs" />
-    <Compile Include="Migrations\201510090827134_images1.Designer.cs">
-      <DependentUpon>201510090827134_images1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201510090940047_image.cs" />
     <Compile Include="Migrations\201510090940047_image.Designer.cs">
@@ -268,14 +265,11 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BddContextMigrations\201510092000356_Initial.resx">
+      <DependentUpon>201510092000356_Initial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510061752305_InitialCreate.resx">
       <DependentUpon>201510061752305_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510082202068_images.resx">
-      <DependentUpon>201510082202068_images.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510090827134_images1.resx">
-      <DependentUpon>201510090827134_images1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201510090940047_image.resx">
       <DependentUpon>201510090940047_image.cs</DependentUpon>

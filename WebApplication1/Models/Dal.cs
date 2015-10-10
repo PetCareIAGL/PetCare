@@ -24,13 +24,12 @@ namespace WebApplication1.Models
 
         List<AdvertisementModel> IDal.getAllAdvertissements()
         {
-            return bdd.advertissements.ToList<AdvertisementModel>();
+            return bdd.advertissements.ToList<AdvertisementModel>();            
         }
 
         void IDal.addAdvertissement(DateTime date_param, string title_param, string description_param, AnimalModel animal_param)
         {
-            bdd.advertissements.Add(new AdvertisementModel { date = date_param, title = title_param, description = description_param, animal = animal_param });
-            
+            bdd.advertissements.Add(new AdvertisementModel { date = date_param, title = title_param, description = description_param, animal = animal_param });            
             // persister les modifications en base de données
             bdd.SaveChanges();
         }
@@ -54,6 +53,12 @@ namespace WebApplication1.Models
         public void deleteAnimal(AnimalModel animal)
         {
             bdd.animals.Remove(animal);
+        }
+
+        public int addAnimal(AnimalModel animal)
+        {
+            bdd.animals.Add(new AnimalModel { name = animal.name, race = animal.race, type = animal.type, photo = animal.photo });
+            return bdd.SaveChanges();
         }
 
         public List<PersonModel> getAllPersons()
@@ -83,10 +88,11 @@ namespace WebApplication1.Models
 
         public void addImage(string description_param, byte[] image_param)
         {
-            bdd.images.Add(new ImageModel {image = image_param, description = description_param});
+            ImageModel img = new ImageModel { image = image_param, description = description_param };
+            bdd.images.Add(img);
             bdd.SaveChanges();
         }
-
+       
         public void deleteImage(ImageModel image)
         {
             bdd.images.Remove(image);

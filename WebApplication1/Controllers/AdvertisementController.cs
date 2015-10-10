@@ -22,13 +22,12 @@ namespace WebApplication1.Controllers
 
             return View();
         }
-
+        
         //
         // POST: /Advertisment/RegisterAdvertisment
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult RegisterAdvertise(AdvertisementModel model, HttpPostedFileBase file)
+        public ActionResult RegisterAdvertisement(AdvertisementModel model, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
@@ -52,14 +51,22 @@ namespace WebApplication1.Controllers
                     }
                     animal.photo = new List<ImageModel> { imgModel };
                 }
-                
+                                
                 using (IDal dal = new Dal())
                 {
-                    dal.addAdvertissement(DateTime.Now, model.title, model.description, null);
-                    List<AdvertisementModel> advertissements = dal.getAllAdvertissements();
-                }                                
+                    dal.addAdvertissement(DateTime.Now, model.title, model.description, animal);
+                } 
+ 
+                return View(model);              
             }
-            return View(model);
+            else
+                return View(model);
+        }
+
+        public enum AdvertisementMessageId
+        {
+            AddAnnonceSuccess,
+            Error
         }
     }
 }
