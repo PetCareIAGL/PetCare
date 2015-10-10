@@ -11,14 +11,23 @@ namespace WebApplication1.Controllers
     public class AdvertisementController : Controller
     {
         // GET: Advertisement
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index(AdvertisementMessageId? message)
+        //{
+        //    ViewBag.result =
+        //        message == AdvertisementMessageId.AddAdvertiseSuccess ? "Your advertise has been added."
+        //        : message == AdvertisementMessageId.Error ? "An error has occurred."
+        //        : "";
 
-        public ActionResult RegisterAdvertisement()
+        //    return View();
+        //}
+
+        public ActionResult RegisterAdvertisement(AdvertisementMessageId? message)
         {
             ViewBag.Message = "Petcare.";
+            ViewBag.result =
+                message == AdvertisementMessageId.AddAdvertiseSuccess ? "Votre annonce à été créé."
+                : message == AdvertisementMessageId.Error ? "Erreur."
+                : "";
 
             return View();
         }
@@ -45,19 +54,15 @@ namespace WebApplication1.Controllers
                     {
                         description = System.IO.Path.GetFileName(file.FileName)
                     };
-                    using (var reader = new System.IO.BinaryReader(file.InputStream))
-                    {
+                    using (var reader = new System.IO.BinaryReader(file.InputStream))                    
                         imgModel.image = reader.ReadBytes(file.ContentLength);
-                    }
+                    
                     animal.photo = new List<ImageModel> { imgModel };
-                }
-                                
-                using (IDal dal = new Dal())
-                {
+                }                                
+                using (IDal dal = new Dal())                
                     dal.addAdvertissement(DateTime.Now, model.title, model.description, animal);
-                } 
- 
-                return View(model);              
+                                
+                return RedirectToAction("RegisterAdvertisement", new { Message = AdvertisementMessageId.AddAdvertiseSuccess });
             }
             else
                 return View(model);
@@ -65,7 +70,7 @@ namespace WebApplication1.Controllers
 
         public enum AdvertisementMessageId
         {
-            AddAnnonceSuccess,
+            AddAdvertiseSuccess,
             Error
         }
     }
