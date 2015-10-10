@@ -21,7 +21,7 @@ namespace WebApplication1.Models
         public string LastName { get; set; }
         public DateTime Birthdate { get; set; }
         public string Adress { get; set; }
-        public byte[] Image { get; set; }
+        public virtual ImageModel Image { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
