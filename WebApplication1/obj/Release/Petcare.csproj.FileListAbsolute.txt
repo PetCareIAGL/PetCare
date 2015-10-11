@@ -62,3 +62,4 @@ C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\o
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\Petcare.csproj.GenerateResource.Cache
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.dll
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.pdb
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\Petcare.csprojResolveAssemblyReference.cache
