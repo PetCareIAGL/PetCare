@@ -24,5 +24,18 @@ namespace WebApplication1.Controllers
                 return memoryStream.ToArray();
             }
         }
+
+        public ImageModel GetImage(HttpPostedFileBase file)
+        {
+            ImageModel imgModel = new ImageModel();
+            
+            if (file != null && file.ContentLength > 0)
+            {
+                imgModel.description = System.IO.Path.GetFileName(file.FileName);                
+                using (var reader = new System.IO.BinaryReader(file.InputStream))
+                    imgModel.image = reader.ReadBytes(file.ContentLength);
+            }
+            return imgModel;
+        }
     }
 }

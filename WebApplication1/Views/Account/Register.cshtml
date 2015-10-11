@@ -63,7 +63,7 @@
                         <span class="prefix">@Html.DisplayNameFor(model => model.PhoneNumber)</span>
                     </div>
                     <div class="small-9 columns">
-                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", @required = "required", @placeholder = "Tapez votre numéro de téléphone ici" })
+                        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control", @placeholder = "Tapez votre numéro de téléphone ici" })
                     </div>
                 </div>
 
@@ -72,7 +72,7 @@
                         <span class="prefix">@Html.DisplayNameFor(model => model.Adress)</span>
                     </div>
                     <div class="small-9 columns">
-                        @Html.TextAreaFor(m => m.Adress, new { @class = "form-control", @required = "required", @placeholder = "Tapez votre adresse ici" })
+                        @Html.TextAreaFor(m => m.Adress, new { @class = "form-control", @placeholder = "Tapez votre adresse ici" })
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                         <span class="prefix">@Html.DisplayNameFor(model => model.Password)</span>
                     </div>
                     <div class="small-9 columns">
-                        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", @required = "required", @placeholder = "Tapez votre mot de passe ici" })
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @required = "required", @placeholder = "Tapez votre mot de passe ici" })
                     </div>
                 </div>
 
@@ -106,7 +106,7 @@
                         <span class="prefix">@Html.DisplayNameFor(model => model.ConfirmPassword)</span>
                     </div>
                     <div class="small-9 columns">
-                        @Html.TextBoxFor(m => m.ConfirmPassword, new { @class = "form-control", @required = "required", @placeholder = "Confirmez votre mot de passe" })
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @required = "required", @placeholder = "Confirmez votre mot de passe" })
                     </div>
                 </div>
             </div>
