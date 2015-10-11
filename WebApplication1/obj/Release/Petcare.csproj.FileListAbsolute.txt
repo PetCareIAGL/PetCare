@@ -55,11 +55,11 @@ C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\b
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.WebPages.resources.dll
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Razor.resources.dll
-C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.Migrations.InitialCreate.resources
-C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.Migrations.images.resources
-C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.Migrations.images1.resources
-C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.Migrations.image.resources
-C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\Petcare.csproj.GenerateResource.Cache
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.dll
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.pdb
+<<<<<<< HEAD
+=======
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\EntityFramework.resources.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\EntityFramework.SqlServer.resources.dll
+>>>>>>> 8acb5046dec4a9694618a42dbef311fc010f5d34
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\Petcare.csprojResolveAssemblyReference.cache
