@@ -22,13 +22,13 @@
             <div class="nav-bar right">
                 <ul class="button-group">
                     <li>
-                        @Html.ActionLink("Accueil", "Index", "Home", new { @class = "button" })
+                        @Html.ActionLink("Accueil", "Index", new { controller = "Home" }, new { @class = "button", hidefocus = "hidefocus" })
                     </li>
                     <li>
-                        @Html.ActionLink("Ajoutez une annonce", "addAdvertissement", "Advertissement", new { @class = "button" })
+                        @Html.ActionLink("Ajoutez une annonce", "addAdvertissement", new { controller = "Advertissement" }, new { @class = "button", hidefocus = "hidefocus" })
                     </li>
                     <li>
-                        @Html.ActionLink("Consultez les annonces", "showAdvertissements", "Advertissement", new { @class = "button" })
+                        @Html.ActionLink("Consultez les annonces", "showAdvertissements", new { controller = "Advertissement" }, new { @class = "button", hidefocus = "hidefocus" })
                     </li>
                 </ul>
             </div>
