@@ -26,18 +26,13 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult AboutUs()
         {
-            // une proprieté automatiquement présent dans le controller; elle est automatiquement passée à la vue
-            ViewBag.Message = "Petcare.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult AboutPetcare()
         {
-            ViewBag.Message = "Petcare.";
-
             return View();
         }
     }
