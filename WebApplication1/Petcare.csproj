@@ -44,6 +44,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -160,7 +162,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdvertisementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -168,23 +169,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510061752305_InitialCreate.cs" />
-    <Compile Include="Migrations\201510061752305_InitialCreate.Designer.cs">
-      <DependentUpon>201510061752305_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510082202068_images.cs" />
-    <Compile Include="Migrations\201510082202068_images.Designer.cs">
-      <DependentUpon>201510082202068_images.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510090827134_images1.cs" />
-    <Compile Include="Migrations\201510090827134_images1.Designer.cs">
-      <DependentUpon>201510090827134_images1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510090940047_image.cs" />
-    <Compile Include="Migrations\201510090940047_image.Designer.cs">
-      <DependentUpon>201510090940047_image.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdvertisementModel.cs" />
     <Compile Include="Models\AnimalModel.cs" />
@@ -199,25 +183,48 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="App_Data\PetcareDB.mdf" />
+    <Content Include="App_Data\PetcareDB_log.ldf">
+      <DependentUpon>PetcareDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\Foundation\app.css" />
+    <Content Include="Content\Foundation\foundation.css" />
+    <Content Include="Content\Foundation\foundation.min.css" />
+    <Content Include="Content\Foundation\foundation.mvc.css" />
+    <Content Include="Content\Foundation\normalize.css" />
+    <Content Include="Content\Petcare\img\avatar.png" />
+    <Content Include="Content\Petcare\img\car1.jpg" />
+    <Content Include="Content\Petcare\img\car2.jpg" />
+    <Content Include="Content\Petcare\img\car3.jpg" />
+    <Content Include="Content\Petcare\img\logo.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Foundation_readme.txt" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\Foundation\foundation.abide.js" />
+    <Content Include="Scripts\Foundation\foundation.alerts.js" />
+    <Content Include="Scripts\Foundation\foundation.clearing.js" />
+    <Content Include="Scripts\Foundation\foundation.cookie.js" />
+    <Content Include="Scripts\Foundation\foundation.dropdown.js" />
+    <Content Include="Scripts\Foundation\foundation.forms.js" />
+    <Content Include="Scripts\Foundation\foundation.interchange.js" />
+    <Content Include="Scripts\Foundation\foundation.joyride.js" />
+    <Content Include="Scripts\Foundation\foundation.js" />
+    <Content Include="Scripts\Foundation\foundation.magellan.js" />
+    <Content Include="Scripts\Foundation\foundation.orbit.js" />
+    <Content Include="Scripts\Foundation\foundation.placeholder.js" />
+    <Content Include="Scripts\Foundation\foundation.reveal.js" />
+    <Content Include="Scripts\Foundation\foundation.section.js" />
+    <Content Include="Scripts\Foundation\foundation.tooltips.js" />
+    <Content Include="Scripts\Foundation\foundation.topbar.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\Foundation\foundation.min.js" />
+    <Content Include="Scripts\Foundation\vendor\fastclick.js" />
+    <Content Include="Scripts\Foundation\vendor\jquery.cookie.js" />
+    <Content Include="Scripts\Foundation\vendor\jquery.js" />
+    <Content Include="Scripts\Foundation\vendor\modernizr.js" />
+    <Content Include="Scripts\Foundation\vendor\placeholder.js" />
+    <Content Include="Scripts\zepto.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -229,11 +236,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -254,6 +259,12 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Foundation.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Petcare\css\" />
+    <Folder Include="Scripts\Petcare\" />
     <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Advertisement\CreateAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\DeleteAdvertisement.cshtml" />
@@ -269,18 +280,7 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510061752305_InitialCreate.resx">
-      <DependentUpon>201510061752305_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510082202068_images.resx">
-      <DependentUpon>201510082202068_images.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510090827134_images1.resx">
-      <DependentUpon>201510090827134_images1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510090940047_image.resx">
-      <DependentUpon>201510090940047_image.cs</DependentUpon>
-    </EmbeddedResource>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

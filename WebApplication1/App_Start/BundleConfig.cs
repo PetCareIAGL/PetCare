@@ -8,24 +8,38 @@ namespace WebApplication1
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/foundationJS").Include(
+                "~/Scripts/Foundation/vendor/fastclick.js",
+                "~/Scripts/Foundation/vendor/jquery*",
+                "~/Scripts/Foundation/vendor/modernizr.js",
+                "~/Scripts/Foundation/vendor/placeholder.js",
+                "~/Scripts/Foundation/foundation*"
+            /*
+            "~/Scripts/Foundation/foundation.abide.js",
+            "~/Scripts/Foundation/foundation.alerts.js",
+            "~/Scripts/Foundation/foundation.clearing.js",
+            "~/Scripts/Foundation/foundation.cookie.js",
+            "~/Scripts/Foundation/foundation.dropdown.js",
+            "~/Scripts/Foundation/foundation.forms.js",
+            "~/Scripts/Foundation/foundation.interchange.js",
+            "~/Scripts/Foundation/foundation.joyride.js",
+            "~/Scripts/Foundation/foundation.js",
+            "~/Scripts/Foundation/foundation.magellan.js",
+            "~/Scripts/Foundation/foundation.offcanvas.js",
+            "~/Scripts/Foundation/foundation.orbit.js",
+            "~/Scripts/Foundation/foundation.placeholder.js",
+            "~/Scripts/Foundation/foundation.reveal.js",
+            "~/Scripts/Foundation/foundation.section.js",
+            "~/Scripts/Foundation/foundation.tooltips.js",
+            "~/Scripts/Foundation/foundation.topbar.js"*/
+            ));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.validate*"));
-
-            // Use the development version of Modernizr to develop with and learn from. Then, when you're
-            // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
-
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js"));
-
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/foundationCSS").Include(
+                "~/Content/Foundation/app.css",
+                "~/Content/Foundation/foundation.css",
+                "~/Content/Foundation/foundation.mvc.css",
+                "~/Content/Foundation/normalize.css"
+            ));
         }
     }
 }
