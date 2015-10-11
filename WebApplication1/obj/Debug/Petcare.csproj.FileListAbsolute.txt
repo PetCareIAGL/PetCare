@@ -176,4 +176,74 @@ C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApp
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\Petcare.csproj.GenerateResource.Cache
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.pdb
+
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.InitialMigrations.resources
+
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\EntityFramework.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\Petcare.csprojResolveAssemblyReference.cache
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.InitialCreate.resources
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.images.resources
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.images1.resources
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.image.resources
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\Petcare.csproj.GenerateResource.Cache
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\WebApplication1.dll.config
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\WebApplication1.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\WebApplication1.pdb
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Antlr3.Runtime.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\EntityFramework.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Newtonsoft.Json.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Owin.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.Helpers.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.Mvc.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.Optimization.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.Razor.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.WebPages.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.WebPages.Razor.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\WebGrease.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.Helpers.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.Optimization.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.Razor.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.WebPages.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\System.Web.WebPages.Razor.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Antlr3.Runtime.pdb
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Newtonsoft.Json.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\EntityFramework.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\EntityFramework.SqlServer.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.Razor.resources.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.WebPages.resources.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Razor.resources.dll
+C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.pdb
+

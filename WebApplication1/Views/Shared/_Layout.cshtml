@@ -1,17 +1,22 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Petcare</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Petcare" content="Pet exchange">
+    <meta name="Gissel, Dieulin and Sofiane" content="">
+
+    <title>@ViewBag.Title | Petcare</title>
 
     <!-- inclusion des bundle -->
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
+    @Styles.Render("~/Content/foundationCSS")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,30 +28,90 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    @*<li>@Html.ActionLink("Page d'accueil", "Index", "Home")</li>*@
+                    
 
                     <!-- html helper pour generer un lien  -->
                     <li>@Html.ActionLink("Qui sommes-nous ?", "About", "Home")</li>
                     <li>@Html.ActionLink("Contactez-nous", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Créer Annonce", "RegisterAdvertisement", "Advertisement")</li>
+*@
+    <!-- section d'entete -->
+    <div class="row">
+        <div class="large-12 columns">
+            <!-- nav-bar -->
+            <div class="nav-bar right">
+                <ul class="button-group">
+                    <li>
+                        @Html.ActionLink("Accueil", "Index", "Home", new { @class = "button" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Ajoutez une annonce", "addAdvertissement", "Advertissement", new { @class = "button" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Consultez les annonces", "showAdvertissements", "Advertissement", new { @class = "button" })
+                    </li>
+                    <li>@Html.ActionLink("Créer Annonce", "RegisterAdvertisement", "Advertisement")</li>
+
                 </ul>
-                <!-- Pour rendre une vue partiel (dans Shared par default) -->
-                @Html.Partial("_LoginPartial")
             </div>
+            <!-- End nav-bar -->
+
+            <img src="@Url.Content("~/Content/Petcare/img/logo.png")" alt="Acceuil"/>
+            <hr />
+            
+            <!-- Liens connexion/ deconnexion  -->
+            <ul class="right breadcrumbs">
+                @if (Request.IsAuthenticated)
+                {
+                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <li>
+                            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                        </li>
+                    }
+                }
+                else
+                {
+                    @Html.ActionLink("S'inscrire", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
+                    @Html.ActionLink("Connexion", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+                }
+            </ul>
+            <!-- End liens connexion/ deconnexion -->
         </div>
     </div>
-
-    <div class="container body-content">
-        <!-- emplacement de la vue -->
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Dieulin, Gissel & Sofiane | Master 2 IAGL</p>
-        </footer>
+    <!-- End section d'entete -->
+    
+    <!-- Content -->
+    <div class="row">
+        <div class="large-12 columns">
+            @RenderBody()
+        </div>
     </div>
+    <!-- End Content -->
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <!-- Footer -->
+    <footer class="row">
+        <div class="large-12 columns">
+            <hr />
+            <div class="row">
+                <div class="large-6 columns">
+                    <p>Dieulin, Gissel & Sofiane | Master 2 IAGL - @DateTime.Now.Year</p>
+                </div>
+                <div class="large-6 columns">
+                    <ul class="inline-list right">
+                        <li><a href="#">Qui sommes-nous</a></li>
+                        <li><a href="#">A propos de</a></li>
+                        <li><a href="#">Contactez-nous</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <!-- include bundles -->
+    @Scripts.Render("~/bundles/foundationJS")
 
     <!-- reserve l'espace pour qu'une vue ecrive du contenu -->
     @RenderSection("scripts", required: false)
