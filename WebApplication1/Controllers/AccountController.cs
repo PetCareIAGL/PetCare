@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WebApplication1.Models;
+using System.Collections.Generic;
+using System.IO;
 
 namespace WebApplication1.Controllers
 {
@@ -17,6 +19,7 @@ namespace WebApplication1.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ImageController _imageController;
 
         public AccountController()
         {
@@ -147,11 +150,35 @@ namespace WebApplication1.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Register(RegisterViewModel model)
+        public async Task<ActionResult> Register(RegisterViewModel model, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
-            {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+            {               
+                if (file != null && file.ContentLength > 0)
+                {
+                    var imgModel = new ImageModel
+                    {
+                        description = System.IO.Path.GetFileName(file.FileName)
+                    };
+                    using (var reader = new System.IO.BinaryReader(file.InputStream))
+                    {
+                        imgModel.image = reader.ReadBytes(file.ContentLength);
+                    }
+                    model.Image = imgModel;                    
+                }
+                
+                var user = new ApplicationUser 
+                { 
+                    UserName = model.Email , 
+                    Email = model.Email ,
+                    Name = model.Name,
+                    LastName = model.LastName,
+                    Birthdate = model.Birthdate,
+                    PhoneNumber = model.PhoneNumber,
+                    Adress = model.Adress,
+                    Image = model.Image                    
+                };
+
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -402,6 +429,33 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+
+        //
+        // GET: /Account/Register
+        [AllowAnonymous]
+        public PartialViewResult Load()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        public PartialViewResult Load(HttpPostedFileBase file)
+        {
+            if (file != null)
+            {
+                _imageController = new ImageController();
+                //get the bytes from the uploaded file
+                byte[] data = _imageController.GetBytesFromFile(file);
+
+                using (IDal dal = new Dal())
+                {
+                    dal.addImage(data, "");
+                }
+            }
+
+            return PartialView();
+        }        
 
         protected override void Dispose(bool disposing)
         {
