@@ -259,12 +259,21 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_Foundation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Petcare\css\" />
     <Folder Include="Scripts\Petcare\" />
+=======
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Advertisement\CreateAdvertisement.cshtml" />
+    <Content Include="Views\Advertisement\DeleteAdvertisement.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+>>>>>>> origin
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
