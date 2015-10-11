@@ -1,20 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication1.Models;
 using Microsoft.AspNet.Identity;
-using System.Web;
-using System.Web.Mvc;
-
 
 namespace WebApplication1.Controllers
 {
     public class AdvertisementController : Controller
     {
-
         private ImageController _imageController;
 
         public ActionResult RegisterAdvertisement(AdvertisementMessageId? message)
@@ -31,14 +26,14 @@ namespace WebApplication1.Controllers
             }
             return View();
         }
-        
+
         //
         // POST: /Advertisment/RegisterAdvertisment
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult RegisterAdvertisement(AdvertisementModel model, HttpPostedFileBase file)
         {
-            if(Request.IsAuthenticated)
+            if (Request.IsAuthenticated)
             {
                 if (ModelState.IsValid)
                 {
@@ -62,12 +57,19 @@ namespace WebApplication1.Controllers
                         dal.addAdvertissement(DateTime.Now, model.title, model.description, animal, userId);
 
                     return RedirectToAction("RegisterAdvertisement", new { Message = AdvertisementMessageId.AddAdvertiseSuccess });
-                }   
+                }
                 else
                     return View(model);
             }
             else
-                return RedirectToAction("Login","Account");
+                return RedirectToAction("Login", "Account");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult showAdvertissements(AdvertisementModel model)
+        {
+            return RedirectToAction("RegisterAdvertisement");
         }
 
         public enum AdvertisementMessageId
@@ -75,8 +77,6 @@ namespace WebApplication1.Controllers
             AddAdvertiseSuccess,
             Error
         }
-
-
 
         // GET: Advertisement
         public ActionResult Index()
@@ -103,7 +103,7 @@ namespace WebApplication1.Controllers
 
             try
             {
-                
+
                 // TODO: Add insert logic here
 
                 return RedirectToAction("Index");
@@ -159,4 +159,3 @@ namespace WebApplication1.Controllers
         }
     }
 }
-

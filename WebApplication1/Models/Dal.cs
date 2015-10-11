@@ -61,26 +61,6 @@ namespace WebApplication1.Models
             return bdd.SaveChanges();
         }
 
-        public List<PersonModel> getAllPersons()
-        {
-            return bdd.persons.ToList<PersonModel>();
-        }
-
-        public void addPerson(string name_param, string lastname_param, DateTime birthday_param, string email_param, string address_param, string phone_param, string login_param, string password_param, ImageModel image_param)
-        {
-            bdd.persons.Add(new PersonModel {
-                image = image_param, name = name_param, address = address_param,
-                birthday = birthday_param, email = email_param, lastname = lastname_param,
-                login = login_param, password = password_param, phone = phone_param
-            });
-            bdd.SaveChanges();
-        }
-
-        public void deleteAnimal(PersonModel person)
-        {
-            bdd.persons.Remove(person);
-        }
-
         public List<ImageModel> getAllImages()
         {
             throw new NotImplementedException();

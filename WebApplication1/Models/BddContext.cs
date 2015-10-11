@@ -21,9 +21,7 @@ namespace WebApplication1.Models
         public DbSet<AnimalModel> animals { get; set; }
 
         public DbSet<AdvertisementModel> advertissements { get; set; }
-
-        public DbSet<PersonModel> persons { get; set; }
-
+        
         public DbSet<ImageModel> images { get; set; }
     }
 }

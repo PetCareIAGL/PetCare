@@ -122,5 +122,11 @@ C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\fr\System.We
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\fr\EntityFramework.resources.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\fr\EntityFramework.SqlServer.resources.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\Petcare.csprojResolveAssemblyReference.cache
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.BddContextMigrations.Initial.resources
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.Migrations.InitialCreate.resources
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.Migrations.image.resources
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.Migrations.InitialMigrations.resources
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\Petcare.csproj.GenerateResource.Cache
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.pdb
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.BddContextMigrations.Initial1.resources
