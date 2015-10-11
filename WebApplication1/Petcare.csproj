@@ -237,8 +237,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -263,15 +262,14 @@
     <Content Include="Views\Shared\_Foundation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Petcare\css\" />
-    <Folder Include="Scripts\Petcare\" />
     <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Advertisement\CreateAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\DeleteAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\EditAvertisement.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="Content\Petcare\css\" />
+    <Folder Include="Scripts\Petcare\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -279,6 +277,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <Content Include="Views\Home\AboutPetcare.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
