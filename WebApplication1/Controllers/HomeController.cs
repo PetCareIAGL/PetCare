@@ -17,7 +17,7 @@ namespace WebApplication1.Controllers
             using (IDal dal = new Dal())
             {
                 //dal.addAdvertissement(DateTime.Now, "Chien méchant", "La description", null);
-                List<AdvertisementModel> advertissements = dal.getAllAdvertissements();
+                //List<AdvertisementModel> advertissements = dal.getAllAdvertissements();
 
                 //ViewBag.Message = "Titre = " + advertissements[0].title;
             }
