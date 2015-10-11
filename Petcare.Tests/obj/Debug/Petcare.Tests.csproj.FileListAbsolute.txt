@@ -8,3 +8,17 @@ C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Debug\EntityFr
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\obj\Debug\Petcare.Tests.csprojResolveAssemblyReference.cache
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\obj\Debug\Petcare.Tests.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\obj\Debug\Petcare.Tests.pdb
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\Petcare.Tests.dll.config
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\Petcare.Tests.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\Petcare.Tests.pdb
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\fr\EntityFramework.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\obj\Debug\Petcare.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\obj\Debug\Petcare.Tests.dll
+C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\Petcare.Tests\obj\Debug\Petcare.Tests.pdb

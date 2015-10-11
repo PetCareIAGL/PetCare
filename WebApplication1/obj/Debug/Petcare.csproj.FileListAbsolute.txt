@@ -176,10 +176,8 @@ C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApp
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\Petcare.csproj.GenerateResource.Cache
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.pdb
-<<<<<<< HEAD
 C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\EntityFramework.resources.dll
 C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\EntityFramework.SqlServer.resources.dll
-=======
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\Petcare.csprojResolveAssemblyReference.cache
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.InitialCreate.resources
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.images.resources
