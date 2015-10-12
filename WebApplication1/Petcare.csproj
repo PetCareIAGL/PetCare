@@ -221,6 +221,7 @@
     <Content Include="Content\Petcare\img\logo2.png" />
     <Content Include="Content\Petcare\img\Pets.jpg" />
     <Content Include="Content\Petcare\img\Pets2.jpg" />
+    <Content Include="Content\Petcare\img\user.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Foundation_readme.txt" />
