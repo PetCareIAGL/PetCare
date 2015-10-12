@@ -5,7 +5,7 @@
     ViewBag.Title = "Créer un annonce";
 }
 
-<h2>Créer un Annonce</h2>
+<h3><a href="#">@ViewBag.Title</a></h3>
 @if (Request.IsAuthenticated)
 {
     using (Html.BeginForm("RegisterAdvertisement", "Advertisement", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
@@ -24,47 +24,61 @@
             <div class="row">
                 <div class="large-6 columns">
                     <div class="panel radius">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                        
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })</span> 
+                            </div>                            
+                            <div class="small-9 columns">
                                 @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })</span>
+                            </div>
+                            <div class="small-9 columns">
                                 @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
                             </div>
                         </div>
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.animal.name, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.animal.name, htmlAttributes: new { @class = "control-label col-md-2" })</span>
+                            </div>
+                            <div class="small-9 columns">
                                 @Html.EditorFor(model => model.animal.name, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.animal.name, "", new { @class = "text-danger" })
                             </div>
                         </div>
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.animal.type, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.animal.type, htmlAttributes: new { @class = "control-label col-md-2" })</span>
+                            </div>
+                            <div class="small-9 columns">
                                 @Html.EditorFor(model => model.animal.type, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.animal.type, "", new { @class = "text-danger" })
                             </div>
                         </div>
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.animal.race, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
+
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.animal.race, htmlAttributes: new { @class = "control-label col-md-2" })</span>
+                            </div>
+                            <div class="small-9 columns">
                                 @Html.EditorFor(model => model.animal.race, new { htmlAttributes = new { @class = "form-control" } })
                                 @Html.ValidationMessageFor(model => model.animal.race, "", new { @class = "text-danger" })
                             </div>
                         </div>
-                        <div class="form-group">
-                            @Html.LabelFor(m => m.animal.photo, new { @class = "control-label col-md-2" })
-                            <fieldset>
-                                <input type="file" name="file" class="input-group "/>
-                            </fieldset>
+
+                        <div class="row collapse">
+                            <div class="large-12 columns">
+                                <input type="file" name="file" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,9 +89,7 @@
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Créer" class="button radius success" />
                 </div>
-            </div>             
-
-            
+            </div>      
         </div>
     }
 }
