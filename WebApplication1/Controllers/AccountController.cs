@@ -408,6 +408,15 @@ namespace WebApplication1.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOut()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
+        }
+
+
         //
         // GET: /Account/ExternalLoginFailure
         [AllowAnonymous]

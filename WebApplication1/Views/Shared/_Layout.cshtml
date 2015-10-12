@@ -29,13 +29,13 @@
                         @Html.ActionLink("Ajoutez une annonce", "RegisterAdvertisement", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
                     </li>
                     <li>
-                        @Html.ActionLink("Consultez les annonces", "showAdvertissements", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
-                    </li>
+                        @Html.ActionLink("Consultez les annonces", "ConsultAdvertisementView", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
+                    </li>                    
                 </ul>
             </div>
             <!-- End nav-bar -->
 
-            <img src="@Url.Content("~/Content/Petcare/img/logo.png")" alt="Acceuil"/>
+            <img src="@Url.Content("~/Content/Petcare/img/logo2.png")" alt="Acceuil" height="400" width="400" margin-top="20" />
             <hr />
             
             <!-- Liens connexion/ deconnexion  -->
@@ -45,12 +45,9 @@
                     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                     {
                         @Html.AntiForgeryToken()
-                        <li>
-                            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-                        </li>
-                        <li>
-                            @Html.ActionLink("Déconnexion", "LogOff", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
-                        </li>
+                        
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })                        
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Déconnexion</a>              
                     }
                 }
                 else
