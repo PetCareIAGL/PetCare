@@ -30,7 +30,7 @@
                     </li>
                     <li>
                         @Html.ActionLink("Consultez les annonces", "ConsultAdvertisementView", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
-                    </li>
+                    </li>                    
                 </ul>
             </div>
             <!-- End nav-bar -->
@@ -45,12 +45,9 @@
                     using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                     {
                         @Html.AntiForgeryToken()
-                        <li>
-                            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-                        </li>
-                        @*<li>
-                            @Html.ActionLink("Déconnexion", "LogOff", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
-                        </li>*@
+                        
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })                        
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Déconnexion</a>              
                     }
                 }
                 else
