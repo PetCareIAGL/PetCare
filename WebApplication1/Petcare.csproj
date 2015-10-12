@@ -287,9 +287,6 @@
     <Content Include="Views\Shared\_Foundation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Person\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Content\Petcare\css\" />
     <Folder Include="Scripts\Petcare\" />
   </ItemGroup>
@@ -299,7 +296,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Views\Advertisementsofiane\DeleteAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\RegisterAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\ConsultAdvertisementView.cshtml" />
     <Content Include="Views\Home\AboutPetcare.cshtml" />

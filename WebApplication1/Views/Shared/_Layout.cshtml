@@ -25,9 +25,16 @@
                     <li>
                         @Html.ActionLink("Accueil", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "button" })
                     </li>
-                    <li>
-                        @Html.ActionLink("Ajoutez une annonce", "RegisterAdvertisement", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
-                    </li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <li>
+                                @Html.ActionLink("Ajoutez une annonce", "RegisterAdvertisement", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
+                            </li>
+                        }
+                    }
                     <li>
                         @Html.ActionLink("Consultez les annonces", "ConsultAdvertisementView", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
                     </li>
