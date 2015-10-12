@@ -18,27 +18,85 @@
             <td width="30%" height="150">
                 @if (!object.ReferenceEquals(item.animal.photo, null) && item.animal.photo.Any())
                 {
-                    <img src="data:image;base64,@System.Convert.ToBase64String(item.animal.photo[0].image)" height="150" width="150" max-width="150" />
+                    <a class="th radius" href="@Url.Content("~/Content/Petcare/img/Pets2.jpg")">
+                        <img src="data:image;base64,@System.Convert.ToBase64String(item.animal.photo[0].image)" height="150" width="150" max-width="150" />
+                    </a>
                 }
                 else
                 {
-                    <img src="~/Content/Petcare/img/default.jpg" height="150" width="150" max-width="150" />
+                    <a class="th radius" href="@Url.Content("~/Content/Petcare/img/Pets2.jpg")">
+                        <img src="~/Content/Petcare/img/default.jpg" height="150" width="150" max-width="150" />
+                    </a>
                 }
             </td>
-            <td style="vertical-align: top; text-align:left;" width="70%">                
-                <br />
-                <span><b>Date:</b>@Html.DisplayFor(modelItem => item.date)</span>
-                <br />
-                <span><b>@Html.DisplayNameFor(model => model.description)</b>@Html.DisplayFor(modelItem => item.description)</span>
-                <br />
-                <span><b>@Html.DisplayNameFor(model => model.animal.name)</b>@Html.DisplayFor(modelItem => item.animal.name)</span>
-                <br />
-                <span><b>@Html.DisplayNameFor(model => model.animal.type)</b>@Html.DisplayFor(modelItem => item.animal.type)</span>
-                <br />
-                <span><b>@Html.DisplayNameFor(model => model.animal.race)</b>@Html.DisplayFor(modelItem => item.animal.race)</span>
-                <br />
-                <br />
-                <a href="#">Contacter</a>
+            <td style="vertical-align: top; text-align:left;" width="70%">  
+                
+                <div class="row">
+                    <div class="large-6 columns">
+                        <div class="row collapse prefix-radius">
+                            <div class="small-3 columns">
+                                <span class="prefix">@Html.DisplayFor(modelItem => item.date)</span>
+                            </div>
+                            <div class="small-9 columns">
+                                <input type="text" placeholder="@Html.DisplayFor(modelItem => item.date)" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-6 columns">
+                        <div class="row collapse prefix-radius">
+                            <div class="small-3 columns">
+                                <span class="prefix">@Html.DisplayNameFor(model => model.description)</span>
+                            </div>
+                            <div class="small-9 columns">
+                                <input type="text" placeholder="@Html.DisplayFor(modelItem => item.description)" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-6 columns">
+                        <div class="row collapse prefix-radius">
+                            <div class="small-3 columns">
+                                <span class="prefix">@Html.DisplayNameFor(model => model.animal.name)</span>
+                            </div>
+                            <div class="small-9 columns">
+                                <input type="text" placeholder="@Html.DisplayFor(modelItem => item.animal.name)" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-6 columns">
+                        <div class="row collapse prefix-radius">
+                            <div class="small-3 columns">
+                                <span class="prefix">@Html.DisplayNameFor(model => model.animal.type)</span>
+                            </div>
+                            <div class="small-9 columns">
+                                <input type="text" placeholder="@Html.DisplayFor(modelItem => item.animal.type)" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-6 columns">
+                        <div class="row collapse prefix-radius">
+                            <div class="small-3 columns">
+                                <span class="prefix">@Html.DisplayNameFor(model => model.animal.race)</span>
+                            </div>
+                            <div class="small-9 columns">
+                                <input type="text" placeholder="@Html.DisplayFor(modelItem => item.animal.race)" readonly="readonly">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="button success">Adopter</a>
             </td>
         </tr>
     </table>
