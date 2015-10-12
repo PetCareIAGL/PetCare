@@ -169,13 +169,14 @@ C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\fr\System.We
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\fr\System.Web.WebPages.resources.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Deployment.resources.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Razor.resources.dll
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\Petcare.csprojResolveAssemblyReference.cache
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.BddContextMigrations.Initial.resources
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.InitialCreate.resources
-C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.images.resources
-C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.images1.resources
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.image.resources
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\Petcare.csproj.GenerateResource.Cache
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Debug\WebApplication1.Migrations.InitialMigrations.resources
 C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\EntityFramework.resources.dll
 C:\Users\Mambouana Dieulin\Documents\Etudes\Master 2 IAGL\VeilleTecho\PetCare\WebApplication1\bin\fr\EntityFramework.SqlServer.resources.dll
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Debug\Petcare.csprojResolveAssemblyReference.cache

@@ -1,0 +1,117 @@
+﻿@using Microsoft.AspNet.Identity
+@model WebApplication1.Models.AdvertisementModel
+
+@{
+    ViewBag.Title = "Créer un annonce";
+}
+
+<h3><a href="#">@ViewBag.Title</a></h3>
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("RegisterAdvertisement", "Advertisement", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class=" text-info col-md-offset-3  ">
+                    <h4>@ViewBag.result</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-6 columns">
+                    <div class="panel radius">
+                        
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })</span> 
+                            </div>                            
+                            <div class="small-9 columns">
+                                @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.description, htmlAttributes: new { @class = "control-label col-md-2" })</span>
+                            </div>
+                            <div class="small-9 columns">
+                                @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.animal.name, htmlAttributes: new { @class = "control-label col-md-2" })</span>
+                            </div>
+                            <div class="small-9 columns">
+                                @Html.EditorFor(model => model.animal.name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.animal.name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.animal.type, htmlAttributes: new { @class = "control-label col-md-2" })</span>
+                            </div>
+                            <div class="small-9 columns">
+                                @Html.EditorFor(model => model.animal.type, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.animal.type, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row collapse">
+                            <div class="large-3 columns">
+                                <span class="prefix">@Html.LabelFor(model => model.animal.race, htmlAttributes: new { @class = "control-label col-md-2" })</span>
+                            </div>
+                            <div class="small-9 columns">
+                                @Html.EditorFor(model => model.animal.race, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.animal.race, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row collapse">
+                            <div class="large-12 columns">
+                                <input type="file" name="file" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Créer" class="button radius success" />
+                </div>
+            </div>      
+        </div>
+    }
+}
+else
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class=" text-danger col-md-offset-1  ">
+                <h4>@ViewBag.status</h4>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-1">
+                @Html.ActionLink("Connexion", "Login", "Account")
+            </div>
+        </div>
+    </div>
+}
+
+
+

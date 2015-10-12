@@ -161,21 +161,44 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="BddContextMigrations\201510092000356_Initial.cs" />
+    <Compile Include="BddContextMigrations\201510092000356_Initial.Designer.cs">
+      <DependentUpon>201510092000356_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BddContextMigrations\201510111608282_Initial1.cs" />
+    <Compile Include="BddContextMigrations\201510111608282_Initial1.Designer.cs">
+      <DependentUpon>201510111608282_Initial1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BddContextMigrations\Configuration1.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdvertisementController.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201510061752305_InitialCreate.cs" />
+    <Compile Include="Migrations\201510061752305_InitialCreate.Designer.cs">
+      <DependentUpon>201510061752305_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510090940047_image.cs" />
+    <Compile Include="Migrations\201510090940047_image.Designer.cs">
+      <DependentUpon>201510090940047_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510101215038_InitialMigrations.cs" />
+    <Compile Include="Migrations\201510101215038_InitialMigrations.Designer.cs">
+      <DependentUpon>201510101215038_InitialMigrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdvertisementModel.cs" />
     <Compile Include="Models\AnimalModel.cs" />
     <Compile Include="Models\BddContext.cs" />
     <Compile Include="Models\Dal.cs" />
     <Compile Include="Models\IDal.cs" />
-    <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -193,10 +216,12 @@
     <Content Include="Content\Foundation\foundation.mvc.css" />
     <Content Include="Content\Foundation\normalize.css" />
     <Content Include="Content\Petcare\img\avatar.png" />
-    <Content Include="Content\Petcare\img\car1.jpg" />
-    <Content Include="Content\Petcare\img\car2.jpg" />
-    <Content Include="Content\Petcare\img\car3.jpg" />
+    <Content Include="Content\Petcare\img\default.jpg" />
     <Content Include="Content\Petcare\img\logo.png" />
+    <Content Include="Content\Petcare\img\logo2.png" />
+    <Content Include="Content\Petcare\img\Pets.jpg" />
+    <Content Include="Content\Petcare\img\Pets2.jpg" />
+    <Content Include="Content\Petcare\img\user.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Foundation_readme.txt" />
@@ -262,12 +287,15 @@
     <Content Include="Views\Shared\_Foundation.cshtml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Advertisement\CreateAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\DeleteAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\EditAvertisement.cshtml" />
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> master
     <Folder Include="Content\Petcare\css\" />
     <Folder Include="Scripts\Petcare\" />
   </ItemGroup>
@@ -277,10 +305,29 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <Content Include="Views\Advertisement\RegisterAdvertisement.cshtml" />
+    <Content Include="Views\Advertisement\ConsultAdvertisementView.cshtml" />
     <Content Include="Views\Home\AboutPetcare.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BddContextMigrations\201510092000356_Initial.resx">
+      <DependentUpon>201510092000356_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BddContextMigrations\201510111608282_Initial1.resx">
+      <DependentUpon>201510111608282_Initial1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510061752305_InitialCreate.resx">
+      <DependentUpon>201510061752305_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510090940047_image.resx">
+      <DependentUpon>201510090940047_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510101215038_InitialMigrations.resx">
+      <DependentUpon>201510101215038_InitialMigrations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

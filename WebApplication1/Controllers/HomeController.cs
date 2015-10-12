@@ -16,13 +16,11 @@ namespace WebApplication1.Controllers
 
             using (IDal dal = new Dal())
             {
-
-                //dal.CreateAdvertissement(DateTime.Now, "Chien méchant", "La description", null);
+                //dal.addAdvertissement(DateTime.Now, "Chien méchant", "La description", null);
                 //List<AdvertisementModel> advertissements = dal.getAllAdvertissements();
 
                 //ViewBag.Message = "Titre = " + advertissements[0].title;
             }
-
             return View();
         }
 
@@ -34,6 +32,6 @@ namespace WebApplication1.Controllers
         public ActionResult AboutPetcare()
         {
             return View();
-        }
+        }        
     }
 }

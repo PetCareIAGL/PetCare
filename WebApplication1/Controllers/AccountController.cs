@@ -153,19 +153,12 @@ namespace WebApplication1.Controllers
         public async Task<ActionResult> Register(RegisterViewModel model, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
-            {               
-                if (file != null && file.ContentLength > 0)
+            {   
+                if (file != null)
                 {
-                    var imgModel = new ImageModel
-                    {
-                        description = System.IO.Path.GetFileName(file.FileName)
-                    };
-                    using (var reader = new System.IO.BinaryReader(file.InputStream))
-                    {
-                        imgModel.image = reader.ReadBytes(file.ContentLength);
-                    }
-                    model.Image = imgModel;                    
-                }
+                    _imageController = new ImageController();
+                    model.Image = _imageController.GetImage(file);
+                }                
                 
                 var user = new ApplicationUser 
                 { 
@@ -182,20 +175,13 @@ namespace WebApplication1.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);                   
                     
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-                    // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }
 
-            // If we got this far, something failed, redisplay form
             return View(model);
         }
 
@@ -421,6 +407,15 @@ namespace WebApplication1.Controllers
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOut()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
+        }
+
 
         //
         // GET: /Account/ExternalLoginFailure

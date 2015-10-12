@@ -15,6 +15,10 @@
                 <img src="data:image;base64,@System.Convert.ToBase64String(Model.images.image)" width="120" height="120" />  
             </dd>
         }
+        else
+        {
+            <img src="~/Content/Petcare/img/user.png" height="150" width="150" max-width="150" />
+        }
         <dt>Prenom:</dt>
         <dd>
             @Model.Name
@@ -32,7 +36,7 @@
             [
             @if (Model.HasPassword)
             {
-                @Html.ActionLink("Changer mot de passe", "ChangePassword")
+                @Html.ActionLink("Modifier mot de passe", "ChangePassword")
             }
             else
             {

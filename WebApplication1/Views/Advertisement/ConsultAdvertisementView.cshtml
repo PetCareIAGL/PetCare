@@ -1,0 +1,46 @@
+﻿@model IEnumerable<WebApplication1.Models.AdvertisementModel>
+
+@{
+    ViewBag.Title = "Consultez les annonces";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title </h2>
+
+@foreach (var item in Model)
+{
+    <table class="table" style="width:100%">
+        <tr><td><h3>@Html.DisplayFor(modelItem => item.title)</h3></td>
+        <td></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td width="30%" height="150">
+                @if (!object.ReferenceEquals(item.animal.photo, null) && item.animal.photo.Any())
+                {
+                    <img src="data:image;base64,@System.Convert.ToBase64String(item.animal.photo[0].image)" height="150" width="150" max-width="150" />
+                }
+                else
+                {
+                    <img src="~/Content/Petcare/img/default.jpg" height="150" width="150" max-width="150" />
+                }
+            </td>
+            <td style="vertical-align: top; text-align:left;" width="70%">                
+                <br />
+                <span><b>Date:</b>@Html.DisplayFor(modelItem => item.date)</span>
+                <br />
+                <span><b>@Html.DisplayNameFor(model => model.description)</b>@Html.DisplayFor(modelItem => item.description)</span>
+                <br />
+                <span><b>@Html.DisplayNameFor(model => model.animal.name)</b>@Html.DisplayFor(modelItem => item.animal.name)</span>
+                <br />
+                <span><b>@Html.DisplayNameFor(model => model.animal.type)</b>@Html.DisplayFor(modelItem => item.animal.type)</span>
+                <br />
+                <span><b>@Html.DisplayNameFor(model => model.animal.race)</b>@Html.DisplayFor(modelItem => item.animal.race)</span>
+                <br />
+                <br />
+                <a href="#">Contacter</a>
+            </td>
+        </tr>
+    </table>
+}
+

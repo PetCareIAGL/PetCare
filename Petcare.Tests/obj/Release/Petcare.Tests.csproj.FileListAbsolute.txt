@@ -1,0 +1,12 @@
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\Petcare.Tests.dll.config
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\Petcare.Tests.dll
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\Petcare.Tests.pdb
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\EntityFramework.dll
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\EntityFramework.xml
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\fr\EntityFramework.resources.dll
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\bin\Release\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\obj\Release\Petcare.Tests.csprojResolveAssemblyReference.cache
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\obj\Release\Petcare.Tests.dll
+C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\Petcare.Tests\obj\Release\Petcare.Tests.pdb

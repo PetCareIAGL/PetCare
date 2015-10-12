@@ -15,46 +15,57 @@
     @Styles.Render("~/Content/foundationCSS")
 </head>
 <body>
-    <!-- section d'entete -->
+
+<!-- section d'entete -->
     <div class="row">
         <div class="large-12 columns">
             <!-- nav-bar -->
             <div class="nav-bar right">
                 <ul class="button-group">
                     <li>
-                        @Html.ActionLink("Accueil", "Index", "Home", new { @class = "button" })
+                        @Html.ActionLink("Accueil", "Index", "Home", routeValues: null, htmlAttributes: new { @class = "button" })
                     </li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <li>
+                                @Html.ActionLink("Ajoutez une annonce", "RegisterAdvertisement", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
+                            </li>
+                        }
+                    }
                     <li>
-                        @Html.ActionLink("Ajoutez une annonce", "addAdvertissement", "Advertissement", new { @class = "button" })
-                    </li>
-                    <li>
-                        @Html.ActionLink("Consultez les annonces", "showAdvertissements", "Advertissement", new { @class = "button" })
+                        @Html.ActionLink("Consultez les annonces", "ConsultAdvertisementView", "Advertisement", routeValues: null, htmlAttributes: new { @class = "button" })
                     </li>
                 </ul>
             </div>
             <!-- End nav-bar -->
 
-            <img src="@Url.Content("~/Content/Petcare/img/logo.png")" alt="Acceuil"/>
+            <img src="@Url.Content("~/Content/Petcare/img/logo2.png")" alt="Acceuil" height="400" width="400" margin-top="20" />
             <hr />
             
             <!-- Liens connexion/ deconnexion  -->
-            <ul class="right breadcrumbs">
-                @if (Request.IsAuthenticated)
+            @if (Request.IsAuthenticated)
+            {
+                using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
                 {
-                    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-                    {
-                        @Html.AntiForgeryToken()
-                        <li>
-                            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
-                        </li>
-                    }
+                    @Html.AntiForgeryToken()
+
+                    <ul class="right breadcrumbs">
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                        <a href="javascript:document.getElementById('logoutForm').submit()">Déconnexion</a>
+                    </ul>
                 }
-                else
-                {
+            }
+            else
+            {
+                <ul class="right breadcrumbs">
                     @Html.ActionLink("S'inscrire", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })
                     @Html.ActionLink("Connexion", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
-                }
-            </ul>
+                </ul>
+            }
+
             <!-- End liens connexion/ deconnexion -->
         </div>
     </div>
@@ -78,8 +89,8 @@
                 </div>
                 <div class="large-6 columns">
                     <ul class="inline-list right">
-                        <li>@Html.ActionLink("A propos de nous", "AboutUs", "Home")</li>
-                        <li>@Html.ActionLink("A propos de Petcare", "AboutPetcare", "Home")</li>
+                        <li>@Html.ActionLink("A propos de nous", "AboutUs", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })</li>                        
+                        <li>@Html.ActionLink("A propos de Petcare", "AboutPetcare", "Home", routeValues: null, htmlAttributes: new { title = "Manage" })</li>
                     </ul>
                 </div>
             </div>
