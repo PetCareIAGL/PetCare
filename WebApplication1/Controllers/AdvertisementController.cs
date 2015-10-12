@@ -65,11 +65,18 @@ namespace WebApplication1.Controllers
                 return RedirectToAction("Login", "Account");
         }
 
+        public ActionResult ConsultAdvertisementView()
+        {
+            IDal dal = new Dal();
+            List<AdvertisementModel> advertissements = dal.getAllAdvertissements();            
+            return View(advertissements);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult showAdvertissements(AdvertisementModel model)
+        public ActionResult ConsultAdvertisementView(AdvertisementModel model)
         {
-            return RedirectToAction("RegisterAdvertisement");
+            return View(model);
         }
 
         public enum AdvertisementMessageId
@@ -89,31 +96,7 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
-
-        // GET: Advertisement/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Advertisement/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-
-            try
-            {
-
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
+       
         // GET: Advertisement/Edit/5
         public ActionResult Edit(int id)
         {

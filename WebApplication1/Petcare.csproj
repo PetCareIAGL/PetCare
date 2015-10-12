@@ -177,7 +177,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\PersonController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -220,7 +219,11 @@
     <Content Include="Content\Petcare\img\car1.jpg" />
     <Content Include="Content\Petcare\img\car2.jpg" />
     <Content Include="Content\Petcare\img\car3.jpg" />
+    <Content Include="Content\Petcare\img\default.jpg" />
     <Content Include="Content\Petcare\img\logo.png" />
+    <Content Include="Content\Petcare\img\logo2.png" />
+    <Content Include="Content\Petcare\img\Pets.jpg" />
+    <Content Include="Content\Petcare\img\Pets2.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Foundation_readme.txt" />
@@ -302,6 +305,7 @@
     <Content Include="Views\Advertisementsofiane\CreateAdvertisement.cshtml" />
     <Content Include="Views\Advertisementsofiane\DeleteAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\RegisterAdvertisement.cshtml" />
+    <Content Include="Views\Advertisement\ConsultAdvertisementView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
