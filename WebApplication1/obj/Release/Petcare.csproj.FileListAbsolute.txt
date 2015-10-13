@@ -57,10 +57,6 @@ C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\b
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\System.Web.WebPages.Razor.resources.dll
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.dll
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\WebApplication1.pdb
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\WebApplication1.dll.config
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\WebApplication1.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\bin\WebApplication1.pdb
@@ -129,10 +125,8 @@ C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\Petc
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.dll
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.pdb
 C:\Users\AnaGissel\Documents\MASTER\Net\PetCare\WebApplication1\obj\Release\WebApplication1.BddContextMigrations.Initial1.resources
->>>>>>> master
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\EntityFramework.resources.dll
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\bin\fr\EntityFramework.SqlServer.resources.dll
->>>>>>> 8acb5046dec4a9694618a42dbef311fc010f5d34
 C:\Users\Sofiane\Documents\Visual Studio 2013\Projects\PetCare\WebApplication1\obj\Release\Petcare.csprojResolveAssemblyReference.cache
 C:\Users\utilisateur\Documents\PetCare\WebApplication1\bin\WebApplication1.dll.config
 C:\Users\utilisateur\Documents\PetCare\WebApplication1\bin\WebApplication1.dll

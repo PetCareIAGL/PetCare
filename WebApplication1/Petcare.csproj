@@ -287,15 +287,12 @@
     <Content Include="Views\Shared\_Foundation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Advertisement\CreateAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\DeleteAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\EditAvertisement.cshtml" />
   </ItemGroup>
   <ItemGroup>
-=======
->>>>>>> master
     <Folder Include="Content\Petcare\css\" />
     <Folder Include="Scripts\Petcare\" />
   </ItemGroup>
