@@ -287,7 +287,6 @@
     <Content Include="Views\Shared\_Foundation.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Advertisement\CreateAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\DeleteAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\EditAvertisement.cshtml" />
@@ -305,6 +304,7 @@
     <Content Include="Views\Advertisement\RegisterAdvertisement.cshtml" />
     <Content Include="Views\Advertisement\ConsultAdvertisementView.cshtml" />
     <Content Include="Views\Home\AboutPetcare.cshtml" />
+    <None Include="Properties\PublishProfiles\petcare.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
