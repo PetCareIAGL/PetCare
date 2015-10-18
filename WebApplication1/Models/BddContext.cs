@@ -14,7 +14,7 @@ namespace WebApplication1.Models
     {
         ///public BddContext() : base("DefaultConnection") { } //: base("MyConnectionString") //connection string name in the database        
         public BddContext()
-            : base("petcare")
+            : base("DefaultConnection")
         {
         }
 

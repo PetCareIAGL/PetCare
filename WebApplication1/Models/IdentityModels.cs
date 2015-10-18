@@ -33,7 +33,7 @@ namespace WebApplication1.Models
     {
         //public MyDbContext() : base("MyConnectionString") { }
         public ApplicationDbContext()
-            : base("petcare", throwIfV1Schema: false)
+            : base("DefaultConnection", throwIfV1Schema: false)
             //: base("MyConnectionString") 
         {
         }
