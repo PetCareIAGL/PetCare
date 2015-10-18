@@ -13,31 +13,31 @@ namespace WebApplication1
                 "~/Scripts/Foundation/vendor/jquery*",
                 "~/Scripts/Foundation/vendor/modernizr.js",
                 "~/Scripts/Foundation/vendor/placeholder.js",
-                "~/Scripts/Foundation/foundation*"
-            /*
-            "~/Scripts/Foundation/foundation.abide.js",
-            "~/Scripts/Foundation/foundation.alerts.js",
-            "~/Scripts/Foundation/foundation.clearing.js",
-            "~/Scripts/Foundation/foundation.cookie.js",
-            "~/Scripts/Foundation/foundation.dropdown.js",
-            "~/Scripts/Foundation/foundation.forms.js",
-            "~/Scripts/Foundation/foundation.interchange.js",
-            "~/Scripts/Foundation/foundation.joyride.js",
-            "~/Scripts/Foundation/foundation.js",
-            "~/Scripts/Foundation/foundation.magellan.js",
-            "~/Scripts/Foundation/foundation.offcanvas.js",
-            "~/Scripts/Foundation/foundation.orbit.js",
-            "~/Scripts/Foundation/foundation.placeholder.js",
-            "~/Scripts/Foundation/foundation.reveal.js",
-            "~/Scripts/Foundation/foundation.section.js",
-            "~/Scripts/Foundation/foundation.tooltips.js",
-            "~/Scripts/Foundation/foundation.topbar.js"*/
+                 "~/Scripts/Foundation/foundation*",
+                 "~/Scripts/Foundation/vendor*"
+           
+                /*"~/Scripts/Foundation/foundation.abide.js",
+                "~/Scripts/Foundation/foundation.alerts.js",
+                "~/Scripts/Foundation/foundation.clearing.js",
+                "~/Scripts/Foundation/foundation.cookie.js",
+                "~/Scripts/Foundation/foundation.dropdown.js",
+                "~/Scripts/Foundation/foundation.forms.js",
+                "~/Scripts/Foundation/foundation.interchange.js",
+                "~/Scripts/Foundation/foundation.joyride.js",
+                "~/Scripts/Foundation/foundation.js",
+                "~/Scripts/Foundation/foundation.magellan.js",
+                "~/Scripts/Foundation/foundation.offcanvas.js",
+                "~/Scripts/Foundation/foundation.orbit.js",
+                "~/Scripts/Foundation/foundation.placeholder.js",
+                "~/Scripts/Foundation/foundation.reveal.js",
+                "~/Scripts/Foundation/foundation.section.js",
+                "~/Scripts/Foundation/foundation.tooltips.js",
+                "~/Scripts/Foundation/foundation.topbar.js"*/
             ));
 
             bundles.Add(new StyleBundle("~/Content/foundationCSS").Include(
-                "~/Content/Foundation/app.css",
                 "~/Content/Foundation/foundation.css",
-                "~/Content/Foundation/foundation.mvc.css",
+                "~/Content/Foundation/foundation.min.css",
                 "~/Content/Foundation/normalize.css"
             ));
         }

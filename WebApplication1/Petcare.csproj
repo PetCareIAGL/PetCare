@@ -210,10 +210,8 @@
     <Content Include="App_Data\PetcareDB_log.ldf">
       <DependentUpon>PetcareDB.mdf</DependentUpon>
     </Content>
-    <Content Include="Content\Foundation\app.css" />
     <Content Include="Content\Foundation\foundation.css" />
     <Content Include="Content\Foundation\foundation.min.css" />
-    <Content Include="Content\Foundation\foundation.mvc.css" />
     <Content Include="Content\Foundation\normalize.css" />
     <Content Include="Content\Petcare\img\avatar.png" />
     <Content Include="Content\Petcare\img\default.jpg" />
@@ -226,32 +224,35 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Foundation_readme.txt" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\Foundation\foundation.abide.js" />
-    <Content Include="Scripts\Foundation\foundation.alerts.js" />
-    <Content Include="Scripts\Foundation\foundation.clearing.js" />
-    <Content Include="Scripts\Foundation\foundation.cookie.js" />
-    <Content Include="Scripts\Foundation\foundation.dropdown.js" />
-    <Content Include="Scripts\Foundation\foundation.forms.js" />
-    <Content Include="Scripts\Foundation\foundation.interchange.js" />
-    <Content Include="Scripts\Foundation\foundation.joyride.js" />
-    <Content Include="Scripts\Foundation\foundation.js" />
-    <Content Include="Scripts\Foundation\foundation.magellan.js" />
-    <Content Include="Scripts\Foundation\foundation.orbit.js" />
-    <Content Include="Scripts\Foundation\foundation.placeholder.js" />
-    <Content Include="Scripts\Foundation\foundation.reveal.js" />
-    <Content Include="Scripts\Foundation\foundation.section.js" />
-    <Content Include="Scripts\Foundation\foundation.tooltips.js" />
-    <Content Include="Scripts\Foundation\foundation.topbar.js" />
-    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\Foundation\foundation.min.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.abide.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.accordion.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.alert.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.clearing.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.dropdown.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.equalizer.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.interchange.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.joyride.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.magellan.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.offcanvas.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.orbit.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.reveal.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.slider.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.tab.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.tooltip.js" />
+    <Content Include="Scripts\Foundation\foundation\foundation.topbar.js" />
     <Content Include="Scripts\Foundation\vendor\fastclick.js" />
     <Content Include="Scripts\Foundation\vendor\jquery.cookie.js" />
     <Content Include="Scripts\Foundation\vendor\jquery.js" />
     <Content Include="Scripts\Foundation\vendor\modernizr.js" />
     <Content Include="Scripts\Foundation\vendor\placeholder.js" />
+    <Content Include="Scripts\jquery.js" />
     <Content Include="Scripts\zepto.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
