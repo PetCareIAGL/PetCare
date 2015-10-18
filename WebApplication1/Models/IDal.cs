@@ -11,6 +11,7 @@ namespace WebApplication1.Models
         List<AdvertisementModel> getAllAdvertissements();
         void addAdvertissement(DateTime date, string title, string description, AnimalModel animal, string userId);
         void deleteAdvertissement(AdvertisementModel advertissement);
+        List<AdvertisementModel> getAdvertissementsByKeyword(string keyword);
 
         // animal actions
         List<AnimalModel> getAllAnimals();

@@ -73,11 +73,20 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult ConsultAdvertisementView(AdvertisementModel model)
         {
-            return View(model);
+            List<AdvertisementModel> advertissements = null;
+            IDal dal = new Dal();
+
+
+            System.Collections.Specialized.NameValueCollection nvc = Request.Form;
+            String keyword = nvc["keyword"];
+
+            advertissements = dal.getAdvertissementsByKeyword(keyword);
+
+            return View(advertissements);
         }
+
 
         public enum AdvertisementMessageId
         {

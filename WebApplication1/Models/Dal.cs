@@ -77,5 +77,10 @@ namespace WebApplication1.Models
         {
             bdd.images.Remove(image);
         }
+
+        List<AdvertisementModel> IDal.getAdvertissementsByKeyword(string keyword)
+        {
+            return bdd.advertissements.Where(advertissement => advertissement.title.Contains(keyword)).ToList<AdvertisementModel>();
+        }
     }
 }

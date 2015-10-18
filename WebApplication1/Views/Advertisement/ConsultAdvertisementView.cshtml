@@ -1,11 +1,24 @@
 ﻿@model IEnumerable<WebApplication1.Models.AdvertisementModel>
+@using WebApplication1.Models
 
 @{
-    ViewBag.Title = "Consultez les annonces";
+    ViewBag.Title = "Liste des annonces disponibles";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>@ViewBag.Title </h2>
+
+
+<!-- Formulaire de recherche -->
+@using (Html.BeginForm("ConsultAdvertisementView", "Advertisement", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="row collapse">
+        <div class="large-4 columns">
+            <input type="text" placeholder="Mot clé" style="height: auto !important;padding-top: .35rem !important;padding-bottom: .35rem !important;" name="keyword" id="keyword">
+        </div>
+        <input type="submit" value="Rechercher" class="button small success" />
+    </div>
+}
 
 @foreach (var item in Model)
 {
