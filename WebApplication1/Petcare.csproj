@@ -287,6 +287,12 @@
     <Content Include="Views\Shared\_Foundation.cshtml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Content Include="Views\Person\Index.cshtml" />
+    <Content Include="Views\Advertisement\CreateAdvertisement.cshtml" />
+    <Content Include="Views\Advertisement\DeleteAdvertisement.cshtml" />
+>>>>>>> 0f52418020a37ffd5c5c43b08637df1207f9d8cd
     <Content Include="Views\Advertisement\EditAvertisement.cshtml" />
   </ItemGroup>
   <ItemGroup>
